@@ -1,0 +1,142 @@
+@font-face {
+    font-family: Gotham;
+    src: url(GothamBook.ttf);
+}
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    font-family: Gotham;
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 60px;
+    background-color: rgba(255, 166, 0, 0.719);
+    list-style: none;
+    position: absolute;
+    top: 0;
+}
+nav li:nth-child(2){
+    font-size: 40px;
+    margin-left: 100px;
+}
+nav li:nth-child(3){
+    font-size: 15px;
+    margin-right: 5px;
+}
+.container{
+    position: absolute;
+    top: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    height: 70vh;
+    width: 100vw;
+}
+#Tcont{
+    height: 299px;
+    width: 299px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.gridpart{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    width: 95px;
+    height: 95px;
+    font-size: 75px;
+    padding-top: 10px;
+}
+#g1,#g2,#g3,#g4,#g5,#g6{
+    border-bottom: 7px solid rgba(115, 39, 138, 0.644);
+}
+#g1,#g2,#g4,#g5,#g7,#g8{
+    border-right: 7px solid rgba(115, 39, 138, 0.644);
+}
+#line{
+    position: relative;
+    height: 0;
+    border-top: 5px solid black;
+    width: 0;
+    transition: width 0.4s ease;
+}
+#update{
+    font-size: 40px;
+    font-weight: 800;
+    color: rgba(0, 153, 255, 0.904);
+}
+.reset{
+    margin-top: 50px;
+    border: none;
+    background-color:rgb(33, 172, 33);
+    color: white;
+    scale: 3;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.reset:hover{
+    scale: 3.1;
+}
+.reset:active{
+    scale: 3;
+}
+#resets{
+    margin-top: 30px;
+}
+.gridpart:not(.filled):hover{
+    background-color: rgb(211, 255, 255);
+}
+.scores{
+    position: absolute;
+    top: 110px;
+    font-size: 35px;
+}
+#scoreX{
+    left: 30%;
+    color: rgba(0, 153, 255, 0.904);
+    font: 800;
+}
+#score0{
+    right: 30%;
+    color: rgba(255, 0, 0, 0.637);
+    font: 800;
+}
+@media screen and (max-width: 1000px){
+    nav li:nth-child(2){
+        font-size: 30px;
+        margin-left: 90px;
+        margin-top: 5px;
+    }
+    nav li:nth-child(3){
+        font-size: 10px;
+        margin-right: 5px;
+    }
+    .reset{
+        scale: 2;
+    }
+    .reset:hover{
+        scale:2.1;
+    }
+    .reset:active{
+        scale: 2;
+    }
+    .scores{
+        position: absolute;
+        top: 110px;
+        font-size: 20px;
+    }
+    #scoreX{
+        left: 5%;
+    }
+    #score0{
+        right: 5%;
+    }
+}

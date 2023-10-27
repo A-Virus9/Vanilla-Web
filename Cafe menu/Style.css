@@ -1,0 +1,79 @@
+body{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: sans-serif;
+}
+.container{
+    width: 800px;
+    padding: 50px 0;
+    margin-top: 5vh;
+    background: url(Images/beans.jpg) no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.content{
+    background-color: burlywood;
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 95%;
+}
+.text{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.content > div:nth-child(3), .content > div:nth-child(1){
+    border-bottom: 4px solid brown;
+}
+h1{
+    font-family: Impact, serif;
+    font-size: 50px;
+}
+h2{
+    font-family: Impact, serif;
+    font-size: 30px;
+}
+.title{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 95%;
+}
+@media screen and (max-width: 840px){
+    .container{
+        width: 600px;
+    }
+}
+@media screen and (max-width: 620px){
+    .container{
+        width: 400px;
+    }
+}
+@media screen and (max-width: 420px){
+    .container{
+        width: 250px;
+    }
+    h1{
+        font-size: 30px;
+    }
+    h2{
+        font-size: 20px;
+    }
+    body{
+        font-size: 12px;
+    }
+}

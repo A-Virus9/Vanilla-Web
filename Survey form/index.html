@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title></title>
+</head>
+<body>
+    <header>
+        <h1 id="title">Survey Form</h1>
+        <p>Thank You for Taking the time to help us improve the platform</p>
+    </header>
+    <div id="container">
+        <form>
+            <div class="field">
+                <p>Name</p>
+                <input type="text" placeholder="Enter your name" class="textboxes" required>
+            </div>
+            <div class="field">
+                <p>Email</p>
+                <input type="email" placeholder="Enter your Email" class="textboxes" required>
+            </div>
+            <div class="field">
+                <p>Age (optional)</p>
+                <input type="number" placeholder="Age" class="textboxes">
+            </div>
+            <div class="field">
+                <p>Which option best describes your current role?</p>
+                <select class="textboxes" required>
+                    <option value="">Select your option</option>
+                    <option>Student</option>
+                    <option>Full Time Job</option>
+                    <option>Full Time Learner</option>
+                    <option>Prefer not to say</option>
+                    <option>Other</option>
+                </select>
+            </div>
+            <div class="field">
+                <p>Would you recommend freeCodeCamp to a friend?</p>
+                <input type="Radio" name="recommend">Definitely<br>
+                <input type="Radio" name="recommend">Maybe<br>
+                <input type="Radio" name="recommend">Not Sure
+            </div>
+            <div class="fiels">
+                <p>What is your favorite feature of freeCodeCamp?</p>
+                <select class="textboxes">
+                    <option value="">Select an option</option>
+                    <option>Challenges</option>
+                    <option>Projects</option>
+                    <option>Community</option>
+                    <option>Open Source</option>
+                </select>
+            </div>
+            <div class="field">
+                <p>What would you like to see improved? (Check all that apply)</p>
+                <input type="checkbox">Front-end Projects <br>
+                <input type="checkbox">Back-end Projects <br>
+                <input type="checkbox">Data Visualization <br>
+                <input type="checkbox">Challenges <br>
+                <input type="checkbox">Open Source Community <br>
+                <input type="checkbox">Gitter help rooms <br>
+                <input type="checkbox">Videos <br>
+                <input type="checkbox">City Meetups <br>
+                <input type="checkbox">Wiki <br>
+                <input type="checkbox">Forum <br>
+                <input type="checkbox">Additional Courses
+            </div>
+            <div class="field">
+                <p>Any comments or suggestions?</p>
+                <textarea cols=50 rows=7 placeholder="Enter your comment here"></textarea>
+            </div>
+            <input type="submit">
+        </form>
+    </div>
+</body>
+</html>

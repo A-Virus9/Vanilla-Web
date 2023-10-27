@@ -1,0 +1,267 @@
+html, body{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+html{
+    font-size: 62.5%;
+}
+header img{
+    height: 4.5rem;
+}
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+#righthead{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
+}
+#righthead img{
+    opacity: 0.7;
+    margin-bottom: 0.5rem;
+}
+.links{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.7;
+}
+.links:hover{
+    opacity: 3;
+}
+.links img{
+    width: 3rem;
+    height: 3rem;
+    margin: 0;
+}
+.linktext{
+    font-size: 1.5rem;
+    margin: 0;
+    color: #888;
+    font-weight: 500;
+}
+#line{
+    border-right: 0.1rem solid #888;
+    width: 0;
+    height: 4rem;
+}
+.textb{
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 1rem -1rem;
+}
+#zero{
+    color: #777;
+    box-sizing: border-box;
+    padding: 1.5rem 2.5rem;
+    border: 0.1rem solid white;
+    border-radius: 5rem;
+}
+#zero:hover{
+    border: 0.1rem solid #444;
+    background-color: #e9e9e9;
+}
+#one{
+    color: rgb(84, 138, 255);
+    border: 0.2rem solid rgb(84, 138, 255);
+    padding: 1.5rem 3rem;
+    border-radius: 5rem;
+}
+#one:hover{
+    background-color: azure;
+    color: rgb(67, 111, 206);
+}
+#first{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 5rem auto;
+    max-width: 150rem;
+}
+#welcome{
+    font-size: 6rem;
+    margin: 0;
+    font-weight: 300;
+    color: #8f5849;
+    font-family: Roboto;
+    margin-bottom: 0 auto;
+}
+.inputtext{
+    font-size: 1.5rem;
+    color: #555;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+.inputbox{
+    width: 45rem;
+    height: 6rem;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+    border: 0.2rem solid black;
+    box-shadow: none;
+    box-sizing: border-box;
+    padding: 0 1.5rem;
+    font-size: 2rem;
+}
+.inputbox:hover{
+    border:0.3rem solid black;
+    background-color: #e9e9e9;
+}
+#forpass a{
+    font-size: 1.8rem;
+    color: rgb(45, 87, 163);
+    text-decoration: none;
+    font-weight: 500;
+}
+#forpass{
+    margin-top: 3rem;
+    margin-bottom: 2.5rem;
+}
+form{
+    width: 100%;
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+}
+#sign{
+    width: 45rem;
+    height: 5rem;
+    border: none;
+    color: white;
+    background-color: rgb(48, 97, 189);
+    border-radius: 5rem;
+    font-size: 2rem;
+    margin-bottom: 3rem;
+}
+#sign:hover{
+    background-color: rgb(35, 68, 131);
+}
+fieldset{
+    border: none;
+    border-top: 0.2rem solid #666;
+    width: 43rem;
+    margin-bottom: 2.5rem;
+}
+legend{
+    text-align: center;
+    font-size: 1.5rem;
+    padding: 0 2.5rem;
+}
+#google{
+    width: 45rem;
+    height: 4rem;
+    border: 0.1rem solid #c5c5c5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    border-radius: 3rem;
+    margin-bottom: 2rem;
+    transition: all 0.1s ease;
+}
+#google:hover{
+    background-color: azure;
+}
+.LgbsSe-Bz112c{
+    width: 2rem;
+    margin-right: 1rem;
+}
+#new{
+    width: 45rem;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    border-radius: 3rem;
+    border: 0.1rem solid black;
+}
+#new:hover{
+    background-color: #e9e9e9;
+}
+#right img{
+    width: 100%;
+}
+#right{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 3rem;
+}
+#left{
+    margin: 0 3rem;
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+}
+@media (max-width: 1020px){
+    .links{
+        display: none;
+    }
+    #line{
+        display: none;
+    }
+    #first{
+        grid-template-columns: 1fr;
+    }
+    #right{
+        margin-top: 2rem;
+    }
+    #right img{
+        width: 70%;
+    }
+    #left{
+        align-items: center;
+        margin-bottom: 3rem;
+        margin: 0 1rem;
+    }
+    .inputbox{
+        width: 100%;
+        align-self: center;
+    }
+    #welcome{
+        font-size: 4rem;
+        align-self: flex-start;
+    }
+    #sign{
+        align-self: center;
+    }
+    fieldset{
+        width: 95%;
+    }
+    #new{
+        width: 100%;
+    }
+}
+@media (max-width: 48.4rem){
+    header{
+        justify-content: center;
+    }
+    #left{
+        width: 35rem;
+        margin: 0 auto;
+    }
+    #sign{
+        width: 35rem;
+    }
+    #google{
+        width: 35rem;
+    }
+    header img{
+        width: 15rem;
+    }
+    #zero{
+        scale: 0.8;
+        margin-right: -6rem;
+    }
+    #one{
+        scale: 0.8;
+    }
+    #welcome{
+        font-size: 3rem;
+    }
+}

@@ -1,0 +1,95 @@
+@font-face {
+    font-family: Gotham;
+    src: url("GothamBook.ttf");
+}
+html, body{
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    font-family: Gotham;
+    color: white;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(47, 161, 255);
+}
+h1{
+    margin: 0;
+}
+h2{
+    font-weight: 100;
+    margin-bottom: 55px;
+}
+#mcont{
+    width: 200px;
+    height: 450px;
+    border: 5px solid rgba(0, 0, 255, 0.63);
+    margin-bottom: 50px;
+    border-radius: 0 0 60px 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    overflow: hidden;
+}
+#empty{
+    width: 100%;
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    background-color: white;
+    transition: all 0.3s ease;
+    font-size: larger;
+    font-weight: 600;
+}
+#full{
+    width: 100%;
+    height: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(136, 201, 255);
+    font-size: 30px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+p{
+    font-size: 20px;
+    margin: 2px;
+}
+#sdiv{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    height: 250px;
+    width: 300px;
+    flex-wrap: wrap;
+}
+.scont{
+    height: 100px;
+    width: 52px;
+    border: 5px solid rgba(0, 0, 255, 0.849);
+    border-radius: 0 0 20px 20px;
+    background-color: rgb(136, 201, 255);
+    font-weight: 900;
+    text-shadow: 0px 0px 1.5px black;
+    color: white;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+.active{
+    background-color: white;
+    color: black;
+    font-weight: 100;
+}
+#rem{
+    font-size: 30px;
+    color: rgba(0, 0, 255, 0.884);
+}

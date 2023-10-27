@@ -1,0 +1,33 @@
+textarea{
+    resize: none;
+}
+body::before{
+    content: "";
+    z-index: -2;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    opacity: 0.9;
+    background: url(https://cdn.freecodecamp.org/testable-projects-fcc/images/survey-form-background.jpeg) center center/cover;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    flex-direction: column;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+}
+header{
+    padding-top: 50px;
+}
+form{
+    background-color: rgba(27, 27, 50, 0.8);
+    z-index: 0;
+    padding: 3rem;
+}
+.textboxes{
+    width:100%;
+    height: 20px;
+}
