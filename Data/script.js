@@ -1,10 +1,10 @@
 const projects = [
   {
-    name: "Cafe Menu",
+    name: "Cafe menu",
     description: "CSS implementation of menu provided in cafes",
   },
   {
-    name: "Color Markers",
+    name: "Color markers",
     description: "Marker like image with CSS"
   },
   {
@@ -12,11 +12,11 @@ const projects = [
     description: "Water intake tracker with JS"
   },
   {
-    name: "Gym Website",
+    name: "Gym website",
     description: "Gym website register page"
   },
   {
-    name: "JS documentation page",
+    name: "Js documentation page",
     description: "Basic Documentation page"
   },
   {
