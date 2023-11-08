@@ -32,7 +32,7 @@ const projects = [
     description: "Clone of nutrition facts template as mentioned in food items"
   },
   {
-    name: "Online Shop",
+    name: "Online shop",
     description: "Basic Online shop landing page"
   },
   {
