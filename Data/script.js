@@ -51,6 +51,10 @@ const projects = [
     name: "Tic-Tac-Toe",
     description: "Simple Tic-Tac-Toe game made in JS"
   },
+  {
+    name: "Natours",
+    description: "Trip planning wesite with SASS"
+  }
 ];
 let i;
 for (i = 1; i <= projects.length; i++) {
