@@ -1,4 +1,4 @@
-/Natours/node_modules
-/Natours/sass
-/Natours/package-lock.json
-/Natours/package.json
+./Natours/node_modules
+./Natours/sass
+./Natours/package-lock.json
+./Natours/package.json
