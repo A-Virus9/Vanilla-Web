@@ -99,6 +99,12 @@ body {
 .u-margin-bottom-small {
   margin-bottom: 1.5rem; }
 
+.u-margin-top-big {
+  margin-top: 8rem; }
+
+.u-margin-top-huge {
+  margin-top: 10rem; }
+
 .btn:link, .btn:visited {
   text-transform: uppercase;
   text-decoration: none;
@@ -106,81 +112,79 @@ body {
   border-radius: 10rem;
   font-size: 1.6rem;
   display: inline-block;
-  transition: all .1s; }
+  transition: all 0.1s; }
 
-.btn:hover {
-  transform: translateY(-0.3rem);
-  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); }
-  .btn:hover::after {
-    transform: scaleX(1.4) scaleY(1.6);
-    opacity: 0; }
-
-.btn:active {
-  transform: translateY(-0.1rem);
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); }
-
-.btn::after {
-  content: "";
-  display: inline-block;
-  height: 100%;
-  width: 100%;
-  border-radius: 10rem;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
-  background-color: #fff;
-  opacity: 1;
-  transition: all 0.4s; }
-
-.btn--white {
-  background-color: #fff;
-  color: #777;
+.btn {
   position: relative; }
-
-.btn--animated {
-  animation: moveInBottom 0.5s ease-in-out 0.75s;
-  animation-fill-mode: backwards; }
-
-.btn-text:link, .btn-text:visited {
-  color: #55c57a;
-  display: inline-block;
-  text-decoration: none;
-  font-size: 1.6rem;
-  border-bottom: 0.1rem solid #55c57a;
-  padding: 0.3rem;
-  transition: all 0.2s; }
-
-.btn-text:hover {
-  color: #fff;
-  transform: translateY(-0.3rem);
-  background-color: #55c57a;
-  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15); }
-
-.btn-text:active {
-  transform: translateY(-0.2rem);
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15); }
+  .btn:hover {
+    transform: translateY(-0.3rem);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); }
+    .btn:hover::after {
+      transform: scaleX(1.4) scaleY(1.6);
+      opacity: 0; }
+  .btn:active {
+    transform: translateY(-0.1rem);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); }
+  .btn::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 10rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    opacity: 1;
+    transition: all 0.4s; }
+  .btn--white {
+    background-color: #fff;
+    color: #777; }
+    .btn--white::after {
+      background-color: #fff; }
+  .btn--green {
+    background-color: #7ed56f;
+    color: #fff; }
+    .btn--green::after {
+      background-color: #7ed56f; }
+  .btn--animated {
+    animation: moveInBottom 0.5s ease-in-out 0.75s;
+    animation-fill-mode: backwards; }
+  .btn-text:link, .btn-text:visited {
+    color: #55c57a;
+    display: inline-block;
+    text-decoration: none;
+    font-size: 1.6rem;
+    border-bottom: 0.1rem solid #55c57a;
+    padding: 0.3rem;
+    transition: all 0.2s; }
+  .btn-text:hover {
+    color: #fff;
+    transform: translateY(-0.3rem);
+    background-color: #55c57a;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15); }
+  .btn-text:active {
+    transform: translateY(-0.2rem);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15); }
 
 .card {
   perspective: 150rem;
   -moz-perspective: 150rem;
   position: relative;
-  height: 50rem; }
+  height: 51rem; }
   .card__side {
-    background-color: orangered;
     color: #fff;
     font-size: 2rem;
-    height: 100%;
-    transition: all .8s ease;
+    height: 50rem;
+    transition: all 0.8s ease;
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     backface-visibility: hidden;
     border-radius: 3px;
+    overflow: hidden;
     box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.3); }
-    .card__side--front {
-      background-color: orangered; }
     .card__side--back {
       transform: rotateY(180deg); }
       .card__side--back1 {
@@ -193,6 +197,66 @@ body {
     transform: rotateY(-180deg); }
   .card:hover .card__side--back {
     transform: rotateY(0deg); }
+  .card__picture {
+    background-size: cover;
+    height: 23rem;
+    background-blend-mode: screen;
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%); }
+    .card__picture--1 {
+      background-image: linear-gradient(to right bottom, #ffb900, #ff7730), url(../img/nat-5.jpg); }
+    .card__picture--2 {
+      background-image: linear-gradient(to right bottom, #7ed56f, #28b485), url(../img/nat-6.jpg); }
+    .card__picture--3 {
+      background-image: linear-gradient(to right bottom, #2998ff, #5643fa), url(../img/nat-7.jpg); }
+  .card__heading {
+    font-size: 2.8rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    text-align: right;
+    color: #fff;
+    position: absolute;
+    top: 12rem;
+    right: 2rem;
+    width: 75%; }
+  .card__heading-span {
+    padding: 1rem 1.5rem;
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone; }
+    .card__heading-span--1 {
+      background-image: linear-gradient(to right bottom, rgba(255, 185, 0, 0.85), rgba(255, 119, 48, 0.85)); }
+    .card__heading-span--2 {
+      background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.85), rgba(40, 180, 133, 0.85)); }
+    .card__heading-span--3 {
+      background-image: linear-gradient(to right bottom, rgba(41, 152, 255, 0.85), rgba(86, 67, 250, 0.85)); }
+  .card__details ul {
+    list-style: none;
+    width: 80%;
+    color: #777;
+    margin: 0 auto; }
+    .card__details ul li {
+      text-align: center;
+      font-size: 1.5rem;
+      padding: 1rem; }
+      .card__details ul li:not(:last-child) {
+        border-bottom: 1px solid #eee; }
+  .card__cta {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    text-align: center; }
+  .card__price-box {
+    text-align: center;
+    color: #fff;
+    margin-bottom: 8rem; }
+  .card__price-only {
+    font-size: 1.4rem;
+    text-transform: uppercase; }
+  .card__price-value {
+    font-size: 6rem;
+    font-weight: 300; }
 
 .composition {
   position: relative; }
@@ -244,7 +308,8 @@ body {
   background-size: cover;
   background-position: top;
   position: relative;
-  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); }
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); }
   .header__logo-box {
     position: absolute;
     top: 4rem;
