@@ -54,6 +54,10 @@ const projects = [
   {
     name: "Natours",
     description: "Trip planning wesite with SASS"
+  },
+  {
+    name: "Guess Game",
+    description: "A simple guessing game with vanilla javascript"
   }
 ];
 let i;

@@ -1,0 +1,201 @@
+*,
+*::after,
+*::before{
+    padding: 0;
+    margin: 0;
+}
+
+@font-face {
+    font-family: "Pixel";
+    src: url(Data/PressStart2P-Regular.ttf);
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    font-family: "Pixel";
+    background-color: #252525;
+    color: white;
+}
+
+.guess{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 10rem;
+}
+
+.guessText{
+    font-size: 4rem;
+}
+
+.bet{
+    margin-top: 2rem;
+    font-size: 1.7rem;
+}
+
+.actualNum{
+    margin-top: 5rem;
+    position: relative;
+    margin-top: 10rem;
+}
+
+.line{
+    width: 100%;
+    background-color: white;
+    height: .7rem;
+}
+
+.numBox{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 16rem;
+    height: 16rem;
+    background-color: white;
+    color: #252525;
+    font-size: 7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: .7rem 0 0 .7rem;
+    box-sizing: border-box;
+}
+
+.left, .right{
+    display: flex;
+    flex-direction: column;
+}
+
+.left{
+    width: 35rem;
+    justify-content: start;
+    align-items: center;
+}
+.right{
+    width: 35rem;
+    height: 17rem;
+    justify-content: space-between;
+    align-items: left;
+}
+
+.guesser_score{
+    width: 50%;
+    margin: 11rem auto 0rem auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.guessBox{
+    width: 25rem;
+    height: 10rem;
+    background-color: #252525;
+    border: .4rem solid white;
+    font-size: 5rem;
+    color: white;
+    font-family: "Pixel";
+    text-align: center;
+    outline: none;
+    margin-bottom: 3rem;
+}
+
+.guessBox::-webkit-inner-spin-button{
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+.btn{
+    font-family: "Pixel";
+    font-size: 2rem;
+    padding: 2rem 1.5rem 1.5rem 2.2rem;
+    box-sizing: border-box;
+    background-color: white;
+}
+
+.btn:hover{
+    background-color: rgb(216, 216, 216);
+    scale: 1.02;
+}
+
+.btn:active{
+    background-color: white;
+    scale: 1;
+}
+
+.text{
+    font-size: 2rem;
+}
+
+.score{
+    margin-bottom: 1rem;
+}
+
+.button_reset{
+    width: 20%;
+    margin: 2rem auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+@media screen and (max-width: 1395px){
+    html{
+        font-size: 55%;
+    }
+}
+
+@media screen and (max-width: 1230px){
+    html{
+        font-size: 50%;
+    }
+}
+
+@media screen and (max-width: 1170px){
+    html{
+        font-size: 40%;
+    }
+}
+
+@media screen and (max-width: 895px){
+    html{
+        font-size: 35%;
+    }
+}
+
+@media screen and (max-width: 785px){
+    .guesser_score{
+        flex-direction: column;
+        margin-top: 25rem;
+        height: 55rem;
+    }
+
+    .right {
+        align-items: center;
+        width: 47rem;
+        height: 22rem
+    }
+
+    .guessBox{
+        width: 30rem;
+    }
+
+    .btn{
+        width: 20rem;
+        height: 8rem;
+        font-size: 2.8rem;
+    }
+
+    .text{
+        font-size: 2.7rem;
+    }
+
+    .score, .highscore{
+        font-size: 2.8rem;
+    }
+}
