@@ -487,7 +487,7 @@ body {
 .form__input:placeholder-shown + .form__label {
   opacity: 0;
   visibility: hidden;
-  transform: translateY(-4.5rem); }
+  transform: translateY(-4.5rem) translateX(-19rem); }
 
 .form__label {
   font-size: 1.2rem;
@@ -497,6 +497,9 @@ body {
   display: block;
   font-family: inherit;
   transition: all .3s ease; }
+  @media (max-width: 56.25em) {
+    .form__label {
+      transform: translateX(-19rem); } }
 
 .form__radio-group {
   width: 49%;
