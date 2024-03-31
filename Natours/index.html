@@ -9,7 +9,6 @@
       rel="stylesheet"
     />
 
-    <link rel="stylesheet" href="css/icon-font.css" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="shortcut icon" type="image/png" href="img/favicon.png" />
 
@@ -28,9 +27,7 @@
       <nav class="navigation__nav">
         <ul class="navigation__list">
           <li class="navigation__items">
-            <a href="#section-about" class="navigation__link"
-              >About natours</a
-            >
+            <a href="#section-about" class="navigation__link">About natours</a>
           </li>
           <li class="navigation__items">
             <a href="#section-features" class="navigation__link"
@@ -38,19 +35,13 @@
             >
           </li>
           <li class="navigation__items">
-            <a href="#section-tours" class="navigation__link"
-              >Popular tours</a
-            >
+            <a href="#section-tours" class="navigation__link">Popular tours</a>
           </li>
           <li class="navigation__items">
-            <a href="#section-stories" class="navigation__link"
-              >Stories</a
-            >
+            <a href="#section-stories" class="navigation__link">Stories</a>
           </li>
           <li class="navigation__items">
-            <a href="#section-book" class="navigation__link"
-              >Book now</a
-            >
+            <a href="#section-book" class="navigation__link">Book now</a>
           </li>
         </ul>
       </nav>
@@ -107,19 +98,25 @@
           <div class="col-1-of-2">
             <div class="composition">
               <img
-                src="img/nat-1-large.jpg"
-                alt="Photo 1"
+                srcset="img/nat-1.jpg 300w, img/nat-1-large.jpg 1000w"
+                sizes="(max-width: 900px) 20vw, (max-width: 600px) 30vw, 300px"
+                alt="photo 1"
                 class="composition__photo composition__photo--p1"
+                src="img/nat-1-large.jpg"
               />
               <img
-                src="img/nat-2-large.jpg"
-                alt="Photo 2"
+                srcset="img/nat-2.jpg 300w, img/nat-2-large.jpg 1000w"
+                sizes="(max-width: 900px) 20vw, (max-width: 600px) 30vw, 300px"
+                alt="photo 2"
                 class="composition__photo composition__photo--p2"
+                src="img/nat-2-large.jpg"
               />
               <img
-                src="img/nat-3-large.jpg"
-                alt="Photo 3"
+                srcset="img/nat-3.jpg 300w, img/nat-3-large.jpg 1000w"
+                sizes="(max-width: 900px) 20vw, (max-width: 600px) 30vw, 300px"
+                alt="photo 3"
                 class="composition__photo composition__photo--p3"
+                src="img/nat-3-large.jpg"
               />
             </div>
           </div>
@@ -391,7 +388,9 @@
                   <label for="email" class="form__label">Email address</label>
                 </div>
 
-                <div class="form__group u-margin-bottom-medium form__group--radios">
+                <div
+                  class="form__group u-margin-bottom-medium form__group--radios"
+                >
                   <div class="form__radio-group">
                     <input
                       type="radio"
@@ -430,7 +429,17 @@
 
     <footer class="footer">
       <div class="footer__logo-box">
-        <img src="img/logo-green-2x.png" alt="Full logo" class="footer__logo" />
+        <picture class="footer__logo">
+          <source
+            srcset="img/logo-green-1x.png 1x, img/logo-green-2x.png 2x"
+            media="(max-width: 37.5em)"
+          />
+          <img
+            srcset="img/logo-green-1x.png 1x, img/logo-green-2x.png 2x"
+            alt="Full logo"
+            src="img/logo-green-2x.png"
+          />
+        </picture>
       </div>
       <div class="row">
         <div class="col-1-of-2">
@@ -456,8 +465,14 @@
         </div>
         <div class="col-1-of-2">
           <p class="footer__copyright">
-            Visit my site <a href="https://akshatvyas.com" class="footer__link" target="_blank">Akshat Vyas</a> for a
-            cookie and also visit my Youtube channel
+            Visit my site
+            <a
+              href="https://akshatvyas.com"
+              class="footer__link"
+              target="_blank"
+              >Akshat Vyas</a
+            >
+            for a cookie and also visit my Youtube channel
             <a href="#" class="footer__link">youtube.com</a>. Copyright &copy;
             by Akshat Vyas. You are 100% allowed to use this webpage for both
             personal and commercial use but not to claim it as your own design.
