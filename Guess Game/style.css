@@ -175,6 +175,10 @@ body{
         height: 55rem;
     }
 
+    .guessText{
+        font-size: 3.4rem;
+    }
+
     .right {
         align-items: center;
         width: 47rem;
