@@ -110,5 +110,5 @@ resets.addEventListener("click",()=>{
   X=0;
   O=0;
   scoreX.innerText=`X-score: ${X}`;
-  score0.innerText=`X-score: ${O}`;
+  score0.innerText=`O-score: ${O}`;
 });
