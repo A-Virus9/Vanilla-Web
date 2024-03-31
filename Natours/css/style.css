@@ -712,6 +712,10 @@ body {
       text-decoration: none;
       text-transform: uppercase;
       display: inline-block; }
+      @media (max-width: 37.5em) {
+        .footer__link:link, .footer__link:visited {
+          margin-left: -.1rem;
+          font-size: 1.1rem; } }
     .footer__link:hover, .footer__link:active {
       color: #7ed56f;
       box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.4);
@@ -827,9 +831,6 @@ body {
   background-size: 220%;
   transition: all .4s ease;
   display: inline-block; }
-  .navigation__link:link span, .navigation__link:visited span {
-    margin-right: 1rem;
-    display: inline-block; }
 
 .navigation__link:hover, .navigation__link:active {
   background-position: 99%;
