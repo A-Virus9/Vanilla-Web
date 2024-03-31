@@ -85,7 +85,7 @@ grid.forEach((gp, index)=>{
   });
 });
 
-reset.addEventListener("click",()=>{
+resetFunc = () =>{
   i=0;
   winstate=0;
   grid.forEach((hi)=>{
@@ -95,18 +95,14 @@ reset.addEventListener("click",()=>{
   winst.style.width="0";
   text.style.color="rgba(0, 153, 255, 0.904)";
   text.innerText="X's Turn";
+}
+
+reset.addEventListener("click",()=>{
+  resetFunc();
 });
 
 resets.addEventListener("click",()=>{
-  i=0;
-  winstate=0;
-  grid.forEach((hi)=>{
-    hi.innerText="";
-    hi.classList.remove("filled");
-  });
-  winst.style.width="0";
-  text.style.color="rgba(0, 153, 255, 0.904)";
-  text.innerText="X's Turn";
+  resetFunc();
   X=0;
   O=0;
   scoreX.innerText=`X-score: ${X}`;
