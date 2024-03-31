@@ -44,7 +44,7 @@ yo = () =>{
   (X==tempX+2)? X-=1:1;
   (O==tempO+2)? O-=1:1;
   scoreX.innerText=`X-score: ${X}`;
-  score0.innerText=`X-score: ${O}`;
+  score0.innerText=`O-score: ${O}`;
 }
 
 yum = () =>{
