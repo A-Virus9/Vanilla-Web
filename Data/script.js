@@ -58,6 +58,10 @@ const projects = [
   {
     name: "Guess Game",
     description: "A simple guessing game with vanilla javascript"
+  },
+  {
+    name: "Mapify",
+    description: "Daily workout logger/marker with leaflet script"
   }
 ];
 let i;

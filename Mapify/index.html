@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mapify | Workout log</title>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin=""
+    />
+    <script
+      defer
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""
+    ></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="side_panel">
+        <div class="logo">
+          <img src="Data/icon.png" alt="Mapify Logo" class="logo_img" />
+          <span class="logo_text">mapify</span>
+        </div>
+        <div class="work_list">
+          <form class="new_work_form hidden">
+            <div class="form_row">
+              <div class="form_type form_field">
+                <div class="form_text">Type</div>
+                <select class="form_input form_select" id="form_select">
+                  <option value="Running" selected>Running</option>
+                  <option value="Cycling">Cycling</option>
+                </select>
+              </div>
+              <div class="form_distance form_field">
+                <label for="form_distance"
+                  ><div class="form_text">Distance</div></label
+                >
+                <input
+                  type="text"
+                  id="form_distance"
+                  class="form_input"
+                  placeholder="km"
+                  required
+                />
+              </div>
+            </div>
+            <div class="form_row">
+              <div class="form_duration form_field">
+                <label for="form_duration"
+                  ><div class="form_text">Duration</div></label
+                >
+                <input
+                  type="text"
+                  id="form_duration"
+                  class="form_input"
+                  placeholder="min"
+                  required
+                />
+              </div>
+              <div class="form_speed_elevGain form_field">
+                <label for="form_speed"
+                  ><div class="form_text form_text_speed">Speed</div></label
+                >
+                <input
+                  type="text"
+                  id="form_speed"
+                  class="form_input"
+                  placeholder="step/min"
+                  required
+                />
+              </div>
+            </div>
+            <input type="submit" class="hidden" />
+          </form>
+        </div>
+        <div class="credits">
+          This project is my iteration of the original project made by Jonas
+          Schmedtmann from udemy
+        </div>
+      </div>
+      <div id="map"></div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
