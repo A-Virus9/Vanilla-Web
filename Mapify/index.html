@@ -21,6 +21,7 @@
   <body>
     <div class="container">
       <div class="side_panel">
+        <div class="side_panel_closer">x</div>
         <div class="logo">
           <img src="Data/icon.png" alt="Mapify Logo" class="logo_img" />
           <span class="logo_text">mapify</span>
@@ -40,10 +41,11 @@
                   ><div class="form_text">Distance</div></label
                 >
                 <input
-                  type="text"
+                  type="number"
                   id="form_distance"
                   class="form_input"
                   placeholder="km"
+                  step="0.01"
                   required
                 />
               </div>
@@ -54,10 +56,11 @@
                   ><div class="form_text">Duration</div></label
                 >
                 <input
-                  type="text"
+                  type="number"
                   id="form_duration"
                   class="form_input"
                   placeholder="min"
+                  step="0.01"
                   required
                 />
               </div>
@@ -66,10 +69,11 @@
                   ><div class="form_text form_text_speed">Speed</div></label
                 >
                 <input
-                  type="text"
+                  type="number"
                   id="form_speed"
                   class="form_input"
                   placeholder="step/min"
+                  step="0.01"
                   required
                 />
               </div>
@@ -82,7 +86,7 @@
           Schmedtmann from udemy
         </div>
       </div>
-      <div id="map"></div>
+      <div id="map" class="map"><div class="side_panel_opener hidden">📃</div></div>
     </div>
     <script src="script.js"></script>
   </body>

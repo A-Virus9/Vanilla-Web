@@ -5,10 +5,21 @@ const durationInput = document.querySelector("#form_duration");
 const speedInput = document.querySelector("#form_speed");
 const selectInput = document.querySelector("#form_select");
 const speedText = document.querySelector(".form_text_speed");
+const sidePanel = document.querySelector(".side_panel");
+const sidePanelCross = document.querySelector(".side_panel_closer");
+const sidePanelOpener = document.querySelector(".side_panel_opener");
+const zoom = document.querySelector(".leaflet-touch .leaflet-bar");
+const mapC = document.querySelector(".map")
 let workoutEntries = document.querySelectorAll(".work_entry");
+
 let mapEvent, map, div;
 let months = ["January","February","March","April","May","June","July","August","September","October","November","December"];
 let date = new Date();
+
+if(screen.availWidth<=1190){
+  sidePanel.classList.add("hidden");
+  sidePanelOpener.classList.remove("hidden")
+}
 
 if (navigator.geolocation) {
   navigator.geolocation.getCurrentPosition(
@@ -29,6 +40,10 @@ if (navigator.geolocation) {
         durationInput.value = "";
         speedInput.value = "";
         form.classList.remove("hidden");
+        sidePanel.classList.remove("hidden");
+        if(screen.availWidth<=1190){
+          mapC.classList.add("hidden");
+        }
         distanceInput.focus();
       });
     },
@@ -37,6 +52,20 @@ if (navigator.geolocation) {
     }
   );
 }
+
+sidePanelCross.addEventListener("click",()=>{
+  sidePanel.classList.add("hidden");
+  sidePanelOpener.classList.remove("hidden");
+  mapC.classList.remove("hidden")
+})
+
+sidePanelOpener.addEventListener("click",()=>{
+  sidePanel.classList.remove("hidden");
+  if(screen.availWidth<=1190){
+    mapC.classList.add("hidden");
+  }
+  form.classList.add("hidden")
+})
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
@@ -92,6 +121,10 @@ form.addEventListener("submit", (e) => {
   form.insertAdjacentHTML("afterend",div)
 
   form.classList.add("hidden");
+  mapC.classList.remove("hidden");
+  if(screen.availWidth<=1190){
+    sidePanel.classList.add("hidden");
+  }
   map.setView([lat, lng],16);
   workoutEntries = document.querySelectorAll(".workout_entry");
   workoutEntries.forEach((item) => {
