@@ -132,6 +132,9 @@ form.addEventListener("submit", (e) => {
   workoutEntries = document.querySelectorAll(".workout_entry");
   workoutEntries.forEach((item) => {
     item.addEventListener("click", (e) => {
+      sidePanel.classList.add("hidden")
+      mapC.classList.remove("hidden")
+      sidePanelOpener.classList.remove("hidden")
       map.setView([e.currentTarget.dataset.lat,e.currentTarget.dataset.lng],16)
     });
   });
