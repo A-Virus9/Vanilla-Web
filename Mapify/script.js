@@ -64,7 +64,10 @@ sidePanelOpener.addEventListener("click",()=>{
   if(screen.availWidth<=1190){
     mapC.classList.add("hidden");
   }
-  form.classList.add("hidden")
+  sidePanelOpener.classList.add("hidden");
+  setTimeout(()=>{
+    form.classList.add("hidden")
+  },1)
 })
 
 form.addEventListener("submit", (e) => {
