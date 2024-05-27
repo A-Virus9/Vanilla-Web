@@ -16,9 +16,13 @@ let mapEvent, map, div;
 let months = ["January","February","March","April","May","June","July","August","September","October","November","December"];
 let date = new Date();
 
+const visibility = (item, bool)=>{
+  bool? item.classList.remove("hidden"): item.classList.add("hidden");
+}
+
 if(screen.availWidth<=1190){
-  sidePanel.classList.add("hidden");
-  sidePanelOpener.classList.remove("hidden")
+  visibility(sidePanel, 0);
+  visibility(sidePanelOpener, 1);
 }
 
 if (navigator.geolocation) {
@@ -39,10 +43,10 @@ if (navigator.geolocation) {
         distanceInput.value = "";
         durationInput.value = "";
         speedInput.value = "";
-        form.classList.remove("hidden");
-        sidePanel.classList.remove("hidden");
+        visibility(form, 1);
+        visibility(sidePanel, 1);
         if(screen.availWidth<=1190){
-          mapC.classList.add("hidden");
+          visibility(mapC,0)
         }
         distanceInput.focus();
       });
@@ -54,19 +58,19 @@ if (navigator.geolocation) {
 }
 
 sidePanelCross.addEventListener("click",()=>{
-  sidePanel.classList.add("hidden");
-  sidePanelOpener.classList.remove("hidden");
-  mapC.classList.remove("hidden")
+  visibility(sidePanel, 0);
+  visibility(sidePanelOpener, 1);
+  visibility(mapC, 1)
 })
 
 sidePanelOpener.addEventListener("click",()=>{
-  sidePanel.classList.remove("hidden");
+  visibility(sidePanel, 1);
   if(screen.availWidth<=1190){
-    mapC.classList.add("hidden");
+    visibility(mapC, 0);
   }
-  sidePanelOpener.classList.add("hidden");
+  visibility(sidePanelOpener, 0)
   setTimeout(()=>{
-    form.classList.add("hidden")
+    visibility(form, 0)
   },1)
 })
 
@@ -123,18 +127,18 @@ form.addEventListener("submit", (e) => {
 
   form.insertAdjacentHTML("afterend",div)
 
-  form.classList.add("hidden");
-  mapC.classList.remove("hidden");
+  visibility(form, 0);
+  visibility(mapC, 1)
   if(screen.availWidth<=1190){
-    sidePanel.classList.add("hidden");
+    visibility(sidePanel, 0)
   }
   map.setView([lat, lng],16);
   workoutEntries = document.querySelectorAll(".workout_entry");
   workoutEntries.forEach((item) => {
     item.addEventListener("click", (e) => {
-      sidePanel.classList.add("hidden")
-      mapC.classList.remove("hidden")
-      sidePanelOpener.classList.remove("hidden")
+      visibility(sidePanel, 0)
+      visibility(mapC, 1)
+      visibility(sidePanelOpener, 1)
       map.setView([e.currentTarget.dataset.lat,e.currentTarget.dataset.lng],16)
     });
   });
@@ -144,4 +148,8 @@ form.addEventListener("submit", (e) => {
 selectInput.addEventListener("change",()=>{
   speedText.innerText = selectInput.value === "Running"? "Speed":"Elevation";
   speedInput.placeholder = selectInput.value === "Running"? "step/min":"m"
+})
+
+window.addEventListener("resize",()=>{
+  location.reload();
 })
