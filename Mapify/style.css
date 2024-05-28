@@ -265,13 +265,8 @@ body {
     font-size: 40%;
   }
 }
-/* @media (max-width: 1330px) {
-  html {
-    font-size: 46%;
+@media(max-width: 1190px){
+  .leaflet-popup{
+    left: -80px !important;
   }
-} */
-/* @media (max-width: 1190px) {
-  html {
-    font-size: 40%;
-  }
-} */
+}
