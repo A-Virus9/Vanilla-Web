@@ -149,7 +149,3 @@ selectInput.addEventListener("change",()=>{
   speedText.innerText = selectInput.value === "Running"? "Speed":"Elevation";
   speedInput.placeholder = selectInput.value === "Running"? "step/min":"m"
 })
-
-window.addEventListener("resize",()=>{
-  location.reload();
-})
