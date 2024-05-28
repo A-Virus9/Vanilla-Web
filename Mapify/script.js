@@ -79,7 +79,7 @@ const handleWorkoutEntryClick = (e) => {
   visibility(mapC, 1);
   setTimeout(() => {
     map.setView([lat, lng], 16);
-  }, 1);
+  }, 100);
 };
 
 const addWorkoutEntry = (lat, lng) => {
